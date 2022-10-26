@@ -112,7 +112,7 @@ print(d)
 dict_comprehension = {}
 for x in range(10):
     if x ** 3 % 4 == 0:
-        d[x] = x ** 3
+        dict_comprehension[x] = x ** 3
 print(dict_comprehension)
 
 # 17.
