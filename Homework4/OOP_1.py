@@ -78,13 +78,14 @@ for animal in (Vedmedyk_Lasunchyk, Siryi_Vovk):
 
 # 8.
 class City:
+    def __new__(cls, name, population):
+        if population > 1500:
+            return object.__new__(City)
+        else:
+            print(f'This city is too small')
+
     def __init__(self, name, population):
         self.name = name
         self.population = population
-        if population < 1500:
-            print('Your city is too small')
-        else:
-            print('This is a city of moderate size')
 
-Lutsk = City('Lutsk', 1000)
-print(Lutsk.name)
+Lutsk=City('Lutsk', 1501)
