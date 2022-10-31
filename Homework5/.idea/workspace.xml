@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efd03a02-0d32-417e-91e0-ea3c43e2accf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Homework6/Advanced classes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOP_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/OOP_2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +99,7 @@
       <workItem from="1666779450886" duration="7000" />
       <workItem from="1666779687672" duration="7000" />
       <workItem from="1667160944563" duration="2669000" />
-      <workItem from="1667163779989" duration="9159000" />
+      <workItem from="1667163779989" duration="10106000" />
     </task>
     <servers />
   </component>
