@@ -1,99 +1,59 @@
 # 1.
+print('Number 1')
+""" Aggregation: # laptop is composite class and battery is its component
+12 volt battery with a capacity of 500 Ah battery allows energy storage of
+approximately 500 Ah x 12 V = 1,600 Wh."""
 class Laptop:
-    def __init__(self):
-       button_1 = Button('This is page 1')
-       button_2 = Button('This is page 2')
-       button_3 = Button('This is page 3')
-       self.laptop = [button_1.voltage, button_2.voltage, button_3.voltage]
-
-class Battery:
     def __init__(self, voltage):
         self.voltage = voltage
 
-# 2.
-class Guitar:
-    def __init__(self):
-        self.string = string
+class Battery:
+    def __init__(self, voltage, AH_capacity):
+        self.voltage = voltage
+        self.AH_capacity = AH_capacity
+        self.obj_laptop = Laptop(self.voltage)
+    def total_capacity(self):
+        answer = self.obj_laptop.voltage * self.AH_capacity
+        return answer
 
+obj_battery = Battery(12, 500)
+print(obj_battery.total_capacity())
+
+# 2.
+print('Number 2')
+class Guitar:
+    def __init__(self, string):
+        self.string = string
 class GuitarString:
     def __init__(self, material_type):
         self.material_type = material_type
 
-nylon = GuitarString('nylon')
+nylon_string = GuitarString('nylon')
 Yamaha = Guitar(nylon_string)
 
 # 3.
-class Calc:
-    """
-    Створіть клас з одним методом "add_nums" та 3 атрибутами, який повертає суму цих атрибутів.
-    """
+print('Number 3')
+class Sum:
+    def __init__(self, syntaxerror, typeerror, nameerror):
+        self.syntaxerror = syntaxerror
+        self.typeerror = typeerror
+        self.nameerror = nameerror
+    def add_nums(self):
+        return self.syntaxerror + self.typeerror + self.nameerror
 
-3
-class Calc:
-    """
-    Створіть клас з одним методом "add_nums" та 3 атрибутами, який повертає суму цих атрибутів.
-    """
+sum = Sum(5, 3, 8)
+print(sum.add_nums())
 
-4*.
+# 4.
+print('Number 4')
 class Pasta:
-    """
-    Створіть клас, який приймає 1 атрибут при ініціалізації - ingredients і визначає інгридієнти атрибута екземпляра.
-    Він повинен мати 2 методи:
-    carbonara (['forcemeat', 'tomatoes']) and bolognaise (['bacon', 'parmesan', 'eggs'])
-    which should create Pasta instances with predefined list of ingredients.
-    Example:
-        pasta_1 = Pasta(["tomato", "cucumber"])
-        pasta_1.ingredients will equal to ["tomato", "cucumber"]
-        pasta_2 = Pasta.bolognaise()
-        pasta_2.ingredients will equal to ['bacon', 'parmesan', 'eggs']
-    """
+    def __init__(self, ingredients):
+        self.ingredients = ingredients
 
-5*.
-class Concert:
-    """
-    Make class, which has max_visitors_num attribute and its instances will have visitors_count attribute.
-    In case of setting visitors_count - max_visitors_num should be checked,
-    if visitors_count value is bigger than max_visitors_num - visitors_count should be assigned with max_visitors_num.
-    Example:
-        Concert.max_visitor_num = 50
-        concert = Concert()
-        concert.visitors_count = 1000
-        print(concert.visitors_count)  # 50
-    """
+    @classmethod
+    def carbonara(cls):
+        return cls(['forcemeat', 'tomatoes'])
 
-6.
-class AddressBookDataClass:
-    """
-    Create dataclass with 7 fields - key (int), name (str), phone_number (str), address (str), email (str), birthday (str), age (int)
-    """
-
-7. Create the same class (6) but using NamedTuple
-
-8.
-class AddressBook:
-    """
-    Create regular class taking 7 params on init - key, name, phone_number, address, email, birthday, age
-    Make its str() representation the same as for AddressBookDataClass defined above.
-    Expected result by printing instance of AddressBook: AddressBook(key='', name='', phone_number='', address='', email='', birthday= '', age='')
-    """
-9.
-class Person:
-    """
-    Change the value of the age property of the person object
-    """
-    name = "John"
-    age = 36
-    country = "USA"
-
-10.
-class Student:
-    """
-    Add an 'email' attribute of the object student and set its value
-    Assign the new attribute to 'student_email' variable and print it by using getattr
-    """
-    id = 0
-    name = ""
-
-    def __init__(self, id, name):
-        self.id = id
-        self.name = name
+    @classmethod
+    def bolognaise(cls):
+        return cls(['bacon', 'parmesan', 'eggs'])
