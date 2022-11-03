@@ -57,3 +57,44 @@ class Pasta:
     @classmethod
     def bolognaise(cls):
         return cls(['bacon', 'parmesan', 'eggs'])
+
+pasta_1 = Pasta.bolognaise()
+print(pasta_1.ingredients)
+
+pasta_2 = Pasta.carbonara()
+print(pasta_2.ingredients)
+
+# 5.
+print('Number 5')
+
+class Concert:
+    max_visitor_num = 50
+    def __init__(self, visitors_count):
+        if visitors_count > max_visitor_num:
+            self.visitors_count = max_visitor_num
+        else:
+            self.visitors_count = visitors_count
+
+print(Concert)
+
+Concert.max_visitor_num = 50
+concert = Concert()
+concert.visitors_count = 1000
+print(concert.visitors_count)
+
+# 6.
+print('Number 6')
+import dataclasses
+@dataclasses.dataclass
+class AddressBookDataClass:
+    key: int
+    name: str
+    phone_number: str
+    address: str
+    email: str
+    birthday: str
+    age: int
+
+schoolAddressBook = AddressBookDataClass(123, 'Mary', '5468931865', '566 Brick Walk', 'slava.ukraini@gmail.com','24.08.1991', 31)
+print(schoolAddressBook.email)
+
