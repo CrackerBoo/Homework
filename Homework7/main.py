@@ -30,7 +30,7 @@ while True:
         print(salon["location"])
     elif flag == 4:
         salon_name = input("Type id of salon you want to delete: ")
-        Salon.delete(id)
+        Salon.delete_id(id)
     elif flag == 5:
         name = input("Type name of employee: ")
         email = input("Type email of employee: ")

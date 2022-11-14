@@ -37,7 +37,7 @@ class Model(ABC):
         instances = cls.get_data("database/" + cls.file)
         for instance in instances:
             if instance["salon_name"] == salon_name:
-                    return instance
+                return instance
 
     @classmethod
     def get_by_id(cls, id):
@@ -53,6 +53,9 @@ class Model(ABC):
         instances = cls.get_data("database/" + cls.file)
         for i in range(len(instances)):
             if instances[i]["id"] == id:
-                del instances[i]
+                del instances.pop[i]
                 break
         cls.save_data_to_file(instances, "database/" + cls.file)
+
+
+
