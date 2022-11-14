@@ -49,11 +49,11 @@ class Model(ABC):
                 return instance
 
     @classmethod
-    def delete(cls, id):
+    def delete_id(cls, id):
         instances = cls.get_data("database/" + cls.file)
         for i in range(len(instances)):
             if instances[i]["id"] == id:
-                del instances.pop[i]
+                del instances[i]
                 break
         cls.save_data_to_file(instances, "database/" + cls.file)
 
