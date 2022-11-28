@@ -18,10 +18,3 @@ lint: ## Check code quality
 
 run: ## Run
 	. .venv/bin/activate; python main.py
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
