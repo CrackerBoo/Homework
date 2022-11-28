@@ -1,6 +1,7 @@
 from datetime import date
 from decimal import Decimal
-from decorator import timer
+
+# from decorator import timer
 
 
 class Employee:
@@ -65,7 +66,7 @@ class Employee:
     def show_line(cls):
         print(cls.ROW_LENGTH * "-")
 
-    def show_row(cls):
+    def show_row(self):
         _name = self.how_long()
         _balance = self._balance
         _taxes_pay = self._taxes * self.days()
